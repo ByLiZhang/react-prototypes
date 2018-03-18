@@ -1,6 +1,19 @@
 import React from 'react';
 
-const Table = () => {
+const Table = (props) => {
+	const tableRows = props.data.map(
+		(item, index) => {
+			// console.log(item);
+			return (
+				<tr key={index}>
+					<td>{item.student}</td>
+					<td>{item.course}</td>
+					<td>{item.grade}</td>
+				</tr>
+				);
+		}
+	);
+	console.log(tableRows);
 	return (
 		<table className='table'>
 			<thead className='thead-inverse'>
@@ -11,7 +24,8 @@ const Table = () => {
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
+				{tableRows}
+				{/*<tr>
 					<td>Lv Bu</td>
 					<td>Archery</td>
 					<td>100</td>
@@ -25,7 +39,7 @@ const Table = () => {
 					<td>Zhu Geliang</td>
 					<td>Tactics</td>
 					<td>120</td>
-				</tr>
+				</tr>*/}
 			</tbody>
 		</table>
 	);
