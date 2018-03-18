@@ -10,10 +10,10 @@ const Table = (props) => {
 					<td>{item.course}</td>
 					<td>{item.grade}</td>
 				</tr>
-				);
+			);
 		}
 	);
-	console.log(tableRows);
+	// console.log(tableRows);
 	return (
 		<table className='table'>
 			<thead className='thead-inverse'>
