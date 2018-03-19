@@ -40,7 +40,7 @@ class Stopwatch extends Component {
 			status: 'running',
 			start: newStart
 		});
-		setTimeout(this.update, 10);
+		setTimeout(this.update, 100);
 	}
 	stop(){
 		this.setState({
@@ -53,7 +53,7 @@ class Stopwatch extends Component {
 			this.setState({
 				elapsed: new Date().getTime() - start
 			});
-			setTimeout(this.update, 10);
+			setTimeout(this.update, 100);
 		}
 	}
 	reset(){
