@@ -14,7 +14,7 @@ class FormatTime extends Component {
 			position: 'relative',
 			left: '50%',
 			transform: 'translate(-50%)',
-			width: '295px'
+			width: '383px'
 		}
 	}
 	render(props){
@@ -22,7 +22,7 @@ class FormatTime extends Component {
 		return(
 			<div style={this.timerStyle}>
 				{/*{this.props.elapsed}*/}
-				{hour}:{min}:{sec}.{ms}
+				{this.leadingZero(hour)}:{this.leadingZero(min)}:{this.leadingZero(sec)}.{this.trailingZero(ms)}
 			</div>
 		);
 	}
@@ -37,6 +37,18 @@ class FormatTime extends Component {
 			ms: Math.floor(elapsed%100)
 		});
 
+	}
+	leadingZero(number){
+		if(number < 10){
+			return '0' + number;
+		}
+		return number;
+	}
+	trailingZero(number){
+		if (number < 10){
+			return number + '0';
+		}
+		return number;
 	}
 }
 
