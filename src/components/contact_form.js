@@ -26,8 +26,15 @@ class ContactForm extends Component {
 
 	handleSubmit(event){
 		event.preventDefault();
-		console.log('handleSubmit called',this.state.form);
-		this.props.add(this.state.form);
+		console.log('handleSubmit called', this.state.form);
+		const {firstName, lastName} = this.state.form;
+		if( firstName && lastName){
+			this.props.add(this.state.form);
+		} else if (firstName === ''){
+			alert('First Name is required');
+		} else if (lastName === ''){
+			alert('Last Name is required');
+		}
 		this.reset();
 	}
 
