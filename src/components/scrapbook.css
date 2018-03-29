@@ -4,3 +4,8 @@
 	position: relative;
 	width: 80vw;
 }
+
+.scrapbook-image {
+	width: 20%;
+	border: 10px solid #fff;
+}
