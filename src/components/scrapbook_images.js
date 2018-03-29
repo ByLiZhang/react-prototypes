@@ -2,8 +2,8 @@ import React from 'react';
 
 export default props => {
 	console.log(props);
-	const {src} = props.about;
+	const {src, style} = props.about;
 	return(
-		<img src={src} className='scrapbook-image'/>
+		<img src={src} style={style} className='scrapbook-image'/>
 	);
 }

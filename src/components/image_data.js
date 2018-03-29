@@ -10,33 +10,62 @@ import puppy8 from './images/puppy8.jpg';
 export default [
 {
 	src: puppy1,
-	style: {}
+	style: {
+		left: '5%',
+		transform: 'rotate(-10deg)'
+	}
 },
 {
 	src: puppy2,
-	style: {}
+	style: {
+		left: '40%',
+		transform: 'rotate(6deg)'
+	}
 },
 {
 	src: puppy3,
-	style: {}
+	style: {
+		left: '8%',
+		top: '28%',
+		transform: 'rotate(8deg)'
+	}
 },
 {
 	src: puppy4,
-	style: {}
+	style: {
+		right: '15%',
+		transform: 'rotate(-9deg)'
+	}
 },
 {
 	src: puppy5,
-	style: {}
+	style: {
+		left: '37%',
+		top: '25%',
+		transform: 'rotate(-12deg)'
+	}
 },
 {
 	src: puppy6,
-	style: {}
+	style: {
+		right: '12%',
+		top: '26%',
+		transform: 'rotate(10deg)'
+	}
 },
 {
 	src: puppy7,
-	style: {}
+	style: {
+		left: '25%',
+		top: '48%',
+		transform: 'rotate(-5deg)'
+	}
 },
 {
 	src: puppy8,
-	style: {}
+	style: {
+		right: '25%',
+		top: '52%',
+		transform: 'rotate(16deg)'
+	}
 }];
