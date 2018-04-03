@@ -1,7 +1,7 @@
 import React from 'react';
 
 const DEFAULT_STATE = {
-	time: null
+	time: new Date().toLocaleTimeString()
 }
 
 export default (state = DEFAULT_STATE, action) => {
