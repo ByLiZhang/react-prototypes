@@ -14,17 +14,19 @@ class MoviesContainer extends Component {
 	componentWillMount(){
 		const BASE_URL = 'http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topMovies/json';
 		axios.get(BASE_URL).then(resp =>{
-			console.log(resp);
 			this.setState({...this.state, movies: resp.data.feed.entry});
 		});
 	}
 
 	render(){
-		console.log(this.state);
+		const movieList = this.state.movies.map((item, index)=>{
+			return (
+				<Movie key={index} info = {item} />
+			);
+		})
 		return (
 			<div>
-				<h2>Movie Container</h2>
-				<Movie/>
+				{movieList}
 			</div>
 		);
 	}
